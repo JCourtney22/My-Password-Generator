@@ -90,18 +90,22 @@ var upperCasedCharacters = [
 
 //Variables for password options
 
-var passwordLength = alert ("Password length will be 10 characters long. \nPlease select the type of characters you would like in your password.")
-var userChoiceSC = confirm("Would you like to use special characters?");
-var userChoiceLC = confirm("Would you like to use lower case letters?");
-var userChoiceUC = confirm("Would you like to use upper case letters?");
-var userChoiceN = confirm("Would you like to use numbers?");
+// var passwordLength = 
+// var userChoiceSC = 
+// var userChoiceLC = 
+// var userChoiceUC = 
+// var userChoiceN = 
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  if (userChoiceSC == true){
-
-  }
+  alert ("Password length will be 10 characters long. \nPlease select the type of characters you would like in your password.");
+  confirm("Would you like to use special characters?");
+  confirm("Would you like to use lower case letters?");
+  confirm("Would you like to use upper case letters?");
+  confirm("Would you like to use numbers?");
 }
+
+getPasswordOptions()
 
 // Function for getting a random element from an array
 function getRandom(arr) {
