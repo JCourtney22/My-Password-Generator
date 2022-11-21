@@ -88,9 +88,16 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+//Variables for password options
+
+var userChoiceSC = prompt('Would you like to use special characters?');
+var userChoiceLC = prompt("Would you like to use lower case letters?");
+var userChoiceUC = prompt("Would you like to use upper case letters?");
+var userChoiceN = prompt("Would you like to use numbers?");
+
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  
 }
 
 // Function for getting a random element from an array
@@ -100,7 +107,10 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-
+  if (userChoiceSC == true){}
+  else if (userChoiceLC == true) {}
+  else if (userChoiceUC == true) {}
+  else (userChoiceN == true)
 }
 
 // Get references to the #generate element
