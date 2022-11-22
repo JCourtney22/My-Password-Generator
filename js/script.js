@@ -88,18 +88,9 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-//Variables for password options
-
-// var passwordLength = 
-// var userChoiceSC = 
-// var userChoiceLC = 
-// var userChoiceUC = 
-// var userChoiceN = 
-
 // Function to prompt user for password options
 function getPasswordOptions() {
   alert ("Password length will be 10 characters long. \nPlease select the type of characters you would like in your password.");
-  confirm("Would you like to use special characters?");
   confirm("Would you like to use lower case letters?");
   confirm("Would you like to use upper case letters?");
   confirm("Would you like to use numbers?");
@@ -109,15 +100,12 @@ getPasswordOptions()
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  
 }
 
 // Function to generate password with user input
 function generatePassword() {
-  if (userChoiceSC == true){}
-  else if (userChoiceLC == true) {}
-  else if (userChoiceUC == true) {}
-  else (userChoiceN == true)
+  
 }
 
 // Get references to the #generate element
