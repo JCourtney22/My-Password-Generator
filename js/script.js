@@ -94,20 +94,18 @@ var upperCasedCharacters = [
 ];
 
 // Function to prompt user for password options
+//This only goes back through to the first prompt once.
 function getPasswordOptions() {
-  var x = parseInt(prompt("Please type how long you would like your password to be."), 10), {
-    if (x < 10 | x > 64) {
-    alert="Please input a number between 10 and 64"
+ var x = parseInt(prompt("Please type how long you would like your password to be."));
+ if (Number.NAN || x <= 10 || x >= 64); {
+    alert("Please input a number between 10 and 64");
+     var x =parseInt(prompt("Please type how long you would like your password to be."), 10);
+   } 
+
+  confirm("Would you like to lower case letters?");
+  confirm("Would you like to use upper case letters?");
+  confirm("Would you like to use numbers?");
   }
-}
-
-// confirm("Would you like to use lower case letters?");
-// confirm("Would you like to use upper case letters?");
-// confirm("Would you like to use numbers?");
-console.log(x)
-}
-
-
 
 // Function for getting a random element from an array
 function getRandom(numericCharacters) {
