@@ -23,5 +23,13 @@ I have also learnt that there is value in seeking support from others. My tutor 
 
 Please see below the screen shot of my prompts and alerts.
 
+![image](https://user-images.githubusercontent.com/115502589/204671147-0197a1db-661c-4d90-bcd9-522ebb758d26.png)
+
+![image](https://user-images.githubusercontent.com/115502589/204671179-f43c0055-8460-4709-b21f-6f900aa53566.png)
+
+![image](https://user-images.githubusercontent.com/115502589/204671226-ed05d7dd-6c95-413e-8f20-4fbada72f343.png)
+
+
+
 ##License
 Please refer to the LICENSE in the repo.
