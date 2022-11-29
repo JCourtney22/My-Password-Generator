@@ -1,9 +1,5 @@
 // Array of special characters to be included in password
 
-
-
-var results = []
-
 var specialCharacters = [
   '@',
   '%',
@@ -93,32 +89,78 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+//Declared Variables
+
+// var results = []
+
+var length = 0;
+var choiceLower = false;
+var choiceUpper = false;
+var choiceNumeric = false;
+var choiceSpecial = false;
+var choices = [];
+var password = "";
+
+
+
 // Function to prompt user for password options
-//This only goes back through to the first prompt once.
+
 function getPasswordOptions() {
-  var x = parseInt(prompt("Please type how long you would like your password to be."));
-  if (Number.NAN || x <= 10 || x >= 64); {
+  var userChoiceLength = prompt("Please type how long you would like your password to be.");
+  length = userChoiceLength;
+  if (Number.NAN || length >= 10 || length <= 64); {
     alert("Please input a number between 10 and 64");
-    var x = parseInt(prompt("Please type how long you would like your password to be."), 10);
+    prompt("Please type how long you would like your password to be.");
   }
-  confirm("Would you like to lower case letters?");
-  confirm("Would you like to use upper case letters?");
-  confirm("Would you like to use numbers?");
-  confirm("Would you like to use special characters?");
+  var lowerSelected = confirm("Would you like to lower case letters?");
+  var upperSelected = confirm("Would you like to use upper case letters?");
+  var numericSelected = confirm("Would you like to use numbers?");
+  var specialSelected = confirm("Would you like to use special characters?");
+  choiceLower = lowerSelected;
+  choiceUpper = upperSelected;
+  choiceNumeric = numericSelected;
+  choiceSpecial = specialSelected;
+  if (choiceLower) {
+    choices.push(lowerCasedCharacters);
+  } 
+  if (choiceUpper) {
+    choices.push(upperCasedCharacters);
+  }
+  if (choiceNumeric) {
+    choices.push(numericCharacters);
+  } 
+  if (choiceSpecial) {
+    choices.push(specialCharacters);
+  } 
 }
 
+console.log(choices)
+
+// function getPasswordOptions() {
+//   var x = parseInt(prompt("Please type how long you would like your password to be."));
+//   if (Number.NAN || x <= 10 || x >= 64); {
+//     alert("Please input a number between 10 and 64");
+//     var x = parseInt(prompt("Please type how long you would like your password to be."), 10);
+//   }
+//   confirm("Would you like to lower case letters?");
+//   confirm("Would you like to use upper case letters?");
+//   confirm("Would you like to use numbers?");
+//   confirm("Would you like to use special characters?");
+// }
+
 // Function for getting a random element from an array
-function getRandom(numericCharacters) {
-  for (var i = 0; i < numericCharacters.length; i++) {
-    return numericCharacters[Math.floor(Math.random() * numericCharacters.length)];
+function getRandom(arr) {
+    return randomArrElement = choices[Math.floor(Math.random() * choices.length)];
   }
-}
 
 getRandom(numericCharacters)
 
 // Function to generate password with user input
 function generatePassword() {
-
+   for (var i =0; i < length; i++) {
+    var randomPassword = Math.floor(Math.random() * choices.length);
+    password += choices(randomPassword);
+  }
 }
 
 // Get references to the #generate element
@@ -129,8 +171,8 @@ function writePassword() {
   // var password = generatePassword();
   var password = getPasswordOptions();
   var passwordText = document.querySelector('#password');
-
   passwordText.value = password;
+
 }
 
 // Add event listener to generate button
