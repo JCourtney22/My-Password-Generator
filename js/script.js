@@ -91,7 +91,6 @@ var upperCasedCharacters = [
 
 //Declared Variables
 
-// var results = []
 
 var length = 0;
 var choiceLower = false;
@@ -101,13 +100,12 @@ var choiceSpecial = false;
 var choices = [];
 var password = "";
 
-
-
 // Function to prompt user for password options
 
 function getPasswordOptions() {
   var userChoiceLength = prompt("Please type how long you would like your password to be.");
   length = userChoiceLength;
+  //I tried several ways of getting the prompt to loop back through but I could not get it to work.
   if (Number.NAN || length >= 10 || length <= 64); {
     alert("Please input a number between 10 and 64");
     prompt("Please type how long you would like your password to be.");
@@ -135,12 +133,14 @@ function getPasswordOptions() {
 }
 
 // Function for getting a random element from an array
+//I feel that I have not quite understood which variable to call in the random function below.
 function getRandom(choices) {
     return choices[Math.floor(Math.random() * choices.length)];
   }
 
 
 // Function to generate password with user input
+//I could no longer move forward with my current knowledge and udnerstanding, despite research, student help and a tutor session.
 function generatePassword() {
    for (var i =0; i < length; i++) {
     password = Math.floor(Math.random() * choices.length);
